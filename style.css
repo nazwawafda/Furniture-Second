@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #3e2723; /* Coklat Tua */
+  color: #fbe9e7; /* Coklat Muda */
+}
+
+header {
+  background: linear-gradient(to right, #6d4c41, #3e2723); /* Gradasi Coklat Muda dan Tua */
+  color: #fff8f6;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 4px solid #5d4037; /* Coklat Lebih Gelap */
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product {
+  background-color: #4e342e; /* Coklat Tua */
+  border: 1px solid #6d4c41; /* Coklat Muda */
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+}
+
+.product-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  min-height: 200px;
+}
+
+.product-images img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #bcaaa4; /* Coklat Terang */
+}
+
+.product h2 {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #ffccbc; /* Coklat Muda */
+  margin: 0.5rem 0;
+}
+
+.price {
+  text-align: center;
+  color: #ffab91; /* Coklat Terang */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+button {
+  display: block;
+  margin: 0.6rem auto;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buy-button {
+  background-color: #6d4c41; /* Coklat Muda */
+  color: #fff8f6;
+}
+
+.buy-button:hover {
+  background-color: #5d4037; /* Coklat Gelap */
+}
+
+.view-button {
+  background-color: #8d6e63; /* Coklat Abu-abu */
+  color: #fff8f6;
+}
+
+.view-button:hover {
+  background-color: #795548; /* Coklat Lebih Gelap */
+}
+
+.pay-button {
+  background-color: #a1887f; /* Coklat Krem */
+  color: white;
+}
+
+.pay-button:hover {
+  background-color: #6d4c41; /* Coklat Muda */
+}
+
+.payment-info {
+  margin-top: 1rem;
+  text-align: center;
+  background-color: #5d4037; /* Coklat Gelap */
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #fbe9e7; /* Coklat Muda */
+}
+
+.sold-out {
+  display: block;
+  background-color: #d84315; /* Merah Terang */
+  color: #fff;
+  padding: 0.4rem;
+  border-radius: 8px;
+  margin-top: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+.product-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ffab91; /* Coklat Terang */
+  color: #4e342e; /* Coklat Tua */
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+footer {
+  background-color: #4e342e; /* Coklat Tua */
+  text-align: center;
+  color: #fff8f6;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background-color: #fff8f6;
+  padding: 1.5rem;
+  max-width: 90%;
+  width: 90%;
+  border-radius: 16px;
+  overflow-y: auto;
+  max-height: 95vh;
+}
+
+.popup-content h3,
+.popup-content p {
+  text-align: center;
+  color: #4e342e; /* Coklat Tua */
+  margin-bottom: 1rem;
+}
+
+#popupImages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#popupImages img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #bcaaa4; /* Coklat Terang */
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #6d4c41; /* Coklat Muda */
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+}
+
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .product-images img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .popup-content {
+    padding: 1rem;
+  }
+
+  #popupImages img {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Furniture</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Furniture</h1>
+    <p>Lemari, Sofa & Meja Multifungsi</p>
+    <p>(Open Nego)</p>
+  </header>
+
+  <main class="container">
+    <!-- Produk 1 -->
+    <div class="product">
+      <div class="product-images">
+        <img src="images/imagesmeja1.jpeg" alt="Meja Belajar Coklat - Tampak Dalam">
+      </div>
+      <h2>Meja Belajar Coklat</h2>
+      <p class="price">Rp400.000</p>
+      <button class="buy-button">Beli Sekarang</button>
+      <button class="view-button"
+        data-title="Meja Belajar Coklat"
+        data-desc="Meja belajar minimalis dengan warna coklat pastel yang hangat. Cocok untuk ruangan anak maupun dewasa. Dilengkapi rak buku dan laci penyimpanan."
+        data-images="images/imagesmeja2.jpeg,images/imagesmeja1.jpeg">Lihat Gambar</button>
+      <div class="payment-info" style="display: none;">
+        <p>Silakan transfer ke rekening berikut:</p>
+        <p><strong>BNI 1240025853 a.n. NURBAYAN</strong></p>
+        <p>Jika sudah bayar screenshoot berikan bukti Via Whatsap</p>
+      </div>
+    </div>
+    <!-- Produk 2 -->
+    <div class="product">
+      <div class="product-images">
+        <img src="images/imagesmeja4.jpeg" alt="Meja Belajar Coklat - Tampak Dalam">
+      </div>
+      <h2>Meja Belajar Pink</h2>
+      <p class="price">Rp250.000</p>
+      <button class="buy-button">Beli Sekarang</button>
+      <button class="view-button"
+        data-title="Meja Belajar Pink"
+        data-desc="Meja belajar minimalis dengan warna pink yang hangat. Cocok untuk ruangan anak. Dilengkapi rak buku dan laci penyimpanan."
+        data-images="images/imagesmeja3.jpeg,images/imagesmeja4.jpeg">Lihat Gambar</button>
+      <div class="payment-info" style="display: none;">
+        <p>Silakan transfer ke rekening berikut:</p>
+        <p><strong>BNI 1240025853 a.n. NURBAYAN</strong></p>
+        <p>Jika sudah bayar screenshoot berikan bukti Via Whatsap</p>
+      </div>
+    </div>
+    <!-- Produk 3-->
+    <div class="product">
+      <div class="product-images">
+        <img src="images/imageslemari1.jpeg" alt="Meja Belajar Coklat - Tampak Depan">
+        <img src="images/imageslemari2.jpeg" alt="Meja Belajar Coklat - Tampak Dalam">
+      </div>
+      <h2>Lemari Pink</h2>
+      <p class="price">Rp350.000</p>
+      <button class="buy-button">Beli Sekarang</button>
+      <button class="view-button"
+        data-title="Lemari Pink"
+        data-desc="Lemari estetik Pink dengan desain ramping dan fungsional. Cocok untuk kamar minimalis modern."
+        data-images="images/imageslemari1.jpeg,images/imageslemari2.jpeg">Lihat Gambar</button>
+      <div class="payment-info" style="display: none;">
+        <p>Silakan transfer ke rekening berikut:</p>
+        <p><strong>BNI 1240025853 a.n. NURBAYAN</strong></p>
+        <p>Jika sudah bayar screenshoot berikan bukti Via Whatsap</p>
+      </div>
+    </div>
+    <!-- Produk 4 -->
+    <!-- Produk 4 -->
+<div class="product">
+  <div class="product-images">
+
+    <!-- Video Produk -->
+    <video controls width="100%">
+      <source src="videos/sofa-video.mp4" type="video/mp4">
+      Video tidak dapat diputar di browser ini.
+    </video>
+  </div>
+  <h2>3 SOFA</h2>
+  <p class="price">Rp1.500.000</p>
+  <button class="buy-button">Beli Sekarang</button>
+  <button class="view-button"
+    data-title="Sofa"
+    data-desc="Sofa empuk dengan balutan kain coklat muda, cocok untuk ruang keluarga atau ruang tamu. Desain clean dan elegan."
+    data-images="images/imagessofa1.jpeg,images/imagessofa2.jpeg,images/imagessofa3.jpeg">Lihat Gambar</button>
+  <div class="payment-info" style="display: none;">
+    <p>Silakan transfer ke rekening berikut:</p>
+    <p><strong>BNI 1240025853 a.n. NURBAYAN</strong></p>
+    <p>Jika sudah bayar screenshoot berikan bukti Via Whatsap</p>
+  </div>
+</div>
+
+
+  </main>
+
+  <footer>
+    <p>©️ 2025 Furniture Second</p>
+  </footer>
+
+ <!-- POPUP -->
+<div class="popup-overlay" id="popup">
+  <div class="popup-content">
+    <span class="close-btn" id="closePopup">&times;</span>
+    <h3 id="popupTitle"></h3>
+    <p id="popupDesc"></p>
+    <div id="popupImages"></div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
